@@ -1,4 +1,4 @@
 sample:
   property: sample
 server:
-  port: 8761
+  port: 8763
