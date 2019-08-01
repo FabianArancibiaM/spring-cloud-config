@@ -10,6 +10,6 @@ spring:
 #spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
     jpa:
         hibernate: 
-            ddl-auto: update
+            ddl-auto: create
 server:
   port: 8759
