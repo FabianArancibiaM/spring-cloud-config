@@ -13,7 +13,7 @@ public class ProductModel implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence")
     @SequenceGenerator(name = "id_Sequence", sequenceName = "ID_SEQ")
-    private Integer id;
+    private Long id;
     @Column(nullable = false)
     private String codigo;
     @Column(nullable = false)
@@ -28,11 +28,20 @@ public class ProductModel implements Serializable {
     public ProductModel() {
     }
 
-    public Integer getId() {
+    public ProductModel(Long id, String codigo, String nombre, BigInteger precio, Long cantidad, String marca) {
+        this.id = id;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.marca = marca;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

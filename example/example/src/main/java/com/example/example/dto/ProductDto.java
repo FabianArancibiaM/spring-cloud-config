@@ -13,6 +13,15 @@ public class ProductDto {
     public ProductDto() {
     }
 
+    public ProductDto(Long id, String codigo, String nombre, BigInteger precio, Long cantidad, String marca) {
+        this.id = id;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.marca = marca;
+    }
+
     public Long getId() {
         return id;
     }

@@ -39,7 +39,7 @@ public class ProductServiceImpl implements ProductService, InitializingBean {
     public List<ProductDto> listProduct() throws Exception{
         try{
             List<ProductDto> listReturn = new ArrayList<>();
-            List<ProductModel> listModels= repository.findAll();
+            List<ProductModel> listModels= repository.findAllByOrderByIdAsc();
             if (listModels==null || listModels.isEmpty()){
                 return null;
             }
